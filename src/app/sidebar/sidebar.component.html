@@ -1,0 +1,10 @@
+<div class="container">
+    <div id="sidebar">
+        <div id="heading">RingCentral</div>
+        <ul>
+            <li *ngFor="let item of menuitems">
+              <a [routerLink]="'/'+ item.path" > {{item.label}}</a> 
+            </li>
+        </ul>
+    </div>
+</div>
