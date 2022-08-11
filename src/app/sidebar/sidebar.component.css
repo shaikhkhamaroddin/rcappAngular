@@ -10,6 +10,7 @@
 
 #sidebar > #heading {
     padding: 30px 0 30px 20px;
+    display: flex;
     visibility: hidden;
     font-size: 1.5vw;
     font-weight: bold;
@@ -17,12 +18,14 @@
 }
 
 #sidebar {
-    width: 15px;
+    width: 10%;
     position: fixed;
+    display: flex;
+    flex-direction: column;
     top: 0;
     left: 0;
     height: 100vh;
-    z-index: 999;
+    z-index: 99;
     background: #2c3457;
     color: #fff;
     transition: all 0.3s;
@@ -34,12 +37,14 @@
 }
 
 #sidebar:hover{
-    width: 200px;
+    width: 20%;
+
+    display: flex;
     transition: all 0.3s;
 
 }
 
-#sidebar:hover > #heading {
+#sidebar:hover > #heading{
     visibility: visible;
 }
 
@@ -57,11 +62,59 @@
     padding: 10px 0 10px 20px;
     /* margin-left: 20px; */
     font-size: 1.1em;
-    display: block;
+    display: flex;
     color: #fff;
     text-decoration: none;
+    align-items: center;
+}
+
+#sidebar ul li a p {
+    visibility: hidden;
 }
 #sidebar ul li a:hover {
     color: #7386D5;
     background: #fff;
 }
+
+#sidebar ul li a:hover >p{
+    color: #7386D5;
+    background: #fff;
+}
+
+li a span{
+    margin-right: 10px;
+}
+
+#sidebar:hover > ul li a  p{
+    visibility: visible;
+}
+
+@media only screen and (max-width: 760px) {
+    #sidebar:hover{
+        min-width: 10%;
+        max-width: 10%;
+    }
+
+#sidebar {
+min-width: 10%;
+
+}
+#sidebar:hover > ul li a  p{
+    visibility: hidden;
+}
+#sidebar:hover > #heading{
+    visibility: hidden;
+}
+  }
+
+  @media only screen and (min-width: 1024px) {
+    #sidebar:hover{
+        max-width: 250px;
+    }
+
+#sidebar {
+max-width: 80px;
+
+}
+
+  }

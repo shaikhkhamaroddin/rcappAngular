@@ -1,10 +1,13 @@
-<div class="container">
-    <div id="sidebar">
-        <div id="heading">RingCentral</div>
-        <ul>
-            <li *ngFor="let item of menuitems">
-              <a [routerLink]="'/'+ item.path" > {{item.label}}</a> 
-            </li>
-        </ul>
-    </div>
-</div>
+        <div class="container">
+            <div id="sidebar">
+                <div id="heading">RingCentral</div>
+                <ul>
+                    <li *ngFor="let item of menuitems">
+                        <a [routerLink]="'/'+ item.path">
+                            <span class="{{item.iconclass}}"></span>
+                            <p>{{item.label}}</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
