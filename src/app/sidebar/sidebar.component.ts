@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 menuitems =[
-  {label:'Login',path:'login',iconclass:"bi bi-lock"},
-  {label:'Home',path:'',iconclass:"bi  bi-calendar3"},
+  // {label:'Login',path:'login',iconclass:"bi bi-lock"},
+  {label:'Home',path:'home',iconclass:"bi  bi-calendar3"},
   {label:'Mail',path:'mail',iconclass:"bi bi-envelope"},
   {label:'Chat',path:'chat',iconclass:"bi bi-chat"},
   {label:'Contact',path:'contact',iconclass:"bi bi-person-lines-fill"},

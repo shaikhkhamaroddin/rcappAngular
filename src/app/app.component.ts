@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { ChatComponent } from './chat/chat.component';
-import { LoginComponent } from './login/login.component';
 
 @Component({
   selector: 'app-root',
