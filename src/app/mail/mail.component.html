@@ -1,4 +1,27 @@
 <div class=" container ">
     <h2>Mail page</h2>
-</div>
-<app-sidebar></app-sidebar>
+    <table class="table">
+        <thead>
+            <th>Name</th>
+            <th>Pic</th>
+            <th>Type</th>
+            <th>url</th>
+        </thead>
+        <tr *ngFor="let user of this.users">
+            <td>
+                {{ user.login }}
+            </td>
+            <td>
+                <img src={{user.avatar_url}} class="image-container" />
+            </td>
+            <td>
+                {{ user.type }}
+            </td>
+            <td>
+                {{ user.url }}
+            </td>
+        </tr>
+    </table>
+
+    <div>
+        <app-sidebar></app-sidebar>

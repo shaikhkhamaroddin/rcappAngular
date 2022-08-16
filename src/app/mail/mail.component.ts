@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-mail',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mail.component.css']
 })
 export class MailComponent implements OnInit {
-
-  constructor() { }
+users:any = [];
+  constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get<[]>('  https://api.github.com/users').subscribe((res)=>{
+      console.log('res> ',res);
+      this.users = res;
+    })
   }
 
 }
